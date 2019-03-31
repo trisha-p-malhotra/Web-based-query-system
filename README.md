@@ -9,8 +9,11 @@ Project for designing the data structure for the database, parsing the text file
 Using this database as the backend, develop a web-based query systemthat allows the following query:
 
 1.Returns the names of APIs based on different criteria, including updated year, protocols, category, rating (such as higher than, equal to, or lower than a given rating), and tags.
+
 2.Returns the names of Mashups based on different criteria, including updatedyear, used APIs, and tags. 
+
 3.Given a set of keywords,returns the names of APIs if all the keywords can be found in thetitle, summary, and the description of the APIs.
+
 4.Given a set ofkeywords, returns the names of Mashups if all the keywords can be found in the title, summary, and the description of the Mashups
 
 To run the code:
