@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if result[0] %}
+<h2>Result of the Search: Result List</h2>
+    {% for results in result %}
+        <p> {{ results }} </p>
+    {% endfor %}
+{% else %}
+    <h3> No result found </h3>
+{% endif %}
+</body>
+</html>

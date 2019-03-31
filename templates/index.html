@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ t }}</title>
+</head>
+<body>
+
+    <div class="form-group">
+        <H2>{{ h }}</H2>
+        <form method="POST" action="/api_year">
+        <H3>Year:</H3><input type="text" name="api_year">
+            <a href="/api_year"><input class="btn" type="submit" value="Search!"></a><br></form>
+
+        <form method="POST" action="/api_protocol">
+        <H3>Protocol:</H3><input type="text" name="api_protocol">
+            <a href="/api_protocol"><input class="btn" type="submit" value="Search!"></a><br></form>
+
+        <form method="POST" action="/api_category">
+        <H3>Category:</H3><input type="text" name="api_category">
+            <a href="/api_category"><input class="btn" type="submit" value="Search!"></a><br></form>
+
+        <form method="POST" action="/api_rating">
+        <H3>Rating:</H3><input type="text" name="api_rating">
+            <a href="/api_rating"><input class="btn" type="submit" value="Search!"></a><br></form>
+
+        <form method="POST" action="/api_tag">
+        <H3>Tag:</H3><input type="text" name="api_tag">
+            <a href="/api_tag"><input class="btn" type="submit" value="Search!"></a><br></form>
+
+        <form method="POST" action="/api_keyword">
+        <H3>Keyword:</H3><input type="text" name="api_keyword">
+            <a href="/api_keyword"><input class="btn" type="submit" value="Search!"></a><br></form>
+
+        <H2>Search from MASHUP collection as per below criteria (any 1):</H2>
+
+        <form method="POST" action="/mashup_year">
+        <H3>Year:</H3><input type="text" name="mashup_year">
+            <a href="/mashup_year"><input class="btn" type="submit" value="Search!"></a><br></form>
+
+        <form method="POST" action="/mashup_api">
+        <H3>Used API:</H3><input type="text" name="mashup_api">
+            <a href="/mashup_api"><input class="btn" type="submit" value="Search!"></a><br></form>
+
+        <form method="POST" action="/mashup_tag">
+        <H3>Tag:</H3><input type="text" name="mashup_tag">
+            <a href="/mashup_tag"><input class="btn" type="submit" value="Search!"></a><br></form>
+
+        <form method="POST" action="/mashup_keyword">
+        <H3>Keyword:</H3><input type="text" name="mashup_keyword">
+            <a href="/mashup_keyword"><input class="btn" type="submit" value="Search!"></a><br></form>
+    </div>
+
+
+
+</body>
+</html>
