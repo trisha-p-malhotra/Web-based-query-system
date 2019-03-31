@@ -1,9 +1,12 @@
 from pymongo import MongoClient
 from flask import Flask, render_template, request, url_for
-
 import re
 
+"""
+__author__: "Trisha P Malhotra", "Kunal V Nayyar".
 
+"""
+    
 app = Flask(__name__)
 title = "List of Web Services"
 heading = "Search from API collection as per below criteria (any 1):"
@@ -24,8 +27,6 @@ def redirect_url():
     return request.args.get('next') or request.referrer or url_for('index')
 
 # API
-
-
 @app.route("/api_year", methods=['POST'])
 def api_year():
     result = []
@@ -35,7 +36,6 @@ def api_year():
     for records in temp_result:
         result.append(records["name"])
     return render_template('apiResult.html', result=result, t=title, h=heading)
-
 
 @app.route("/api_protocol", methods=['POST'])
 def api_protocol():
@@ -47,7 +47,6 @@ def api_protocol():
         result.append(records["name"])
     return render_template('apiResult.html', result=result, t=title, h=heading)
 
-
 @app.route("/api_category", methods=['POST'])
 def api_category():
     result=[]
@@ -57,7 +56,6 @@ def api_category():
     for records in temp_result:
         result.append(records["name"])
     return render_template('apiResult.html', result=result, t=title, h=heading)
-
 
 @app.route("/api_rating", methods=['POST'])
 def api_rating():
@@ -77,7 +75,6 @@ def api_rating():
 
     return render_template('apiResult.html', result=result, t=title, h=heading)
 
-
 @app.route("/api_tag", methods=['POST'])
 def api_tags():
     result = []
@@ -88,7 +85,6 @@ def api_tags():
         result.append(records["name"])
 
     return render_template('apiResult.html', result=result, t=title, h=heading)
-
 
 @app.route("/api_keyword", methods=['POST'])
 def api_keyword():
@@ -104,9 +100,7 @@ def api_keyword():
             result.append(records["name"])
     return render_template('apiResult.html', result=result, t=title, h=heading)
 
-
-# MASHUP
-
+# MASHUP database
 @app.route("/mashup_year", methods=['POST'])
 def mashup_year():
     result = []
@@ -117,7 +111,6 @@ def mashup_year():
         result.append(records["name"])
 
     return render_template('apiResult.html', result=result, t=title, h=heading)
-
 
 @app.route("/mashup_api", methods=['POST'])
 def mashup_api():
@@ -130,7 +123,6 @@ def mashup_api():
 
     return render_template('apiResult.html', result=result, t=title, h=heading)
 
-
 @app.route("/mashup_tag", methods=['POST'])
 def mashup_tags():
     mashup_tags = request.form['mashup_tag']
@@ -140,7 +132,6 @@ def mashup_tags():
     for records in temp_result:
         result.append(records["name"])
     return render_template('apiResult.html', result=result, t=title, h=heading)
-
 
 @app.route("/mashup_keyword", methods=['POST'])
 def mashup_keyword():
@@ -154,8 +145,10 @@ def mashup_keyword():
             result.append(records["name"])
     return render_template('apiResult.html', result=result, t=title, h=heading)
 
-
 def main():
+    """
+    Parses the textfiles api.text and mashup.txt, and stores them into MongoDB's seperate collections.
+    """
     # Field tag in api.txt file
     api_fields = ["id", "title", "summary", "rating", "name", "label", "author", "description",
                   "type", "downloads", "useCount", "sampleUrl", "downloadUrl", "dateModified", "remoteFeed",
