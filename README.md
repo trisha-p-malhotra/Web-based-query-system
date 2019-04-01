@@ -1,9 +1,9 @@
 # WebServiceMashup
 A web based query system that uses the following tech-stack:
--REST
--MongoDB
--Python
--Flask
+-REST  
+-MongoDB  
+-Python  
+-Flask  
 
 Given dataset: 
 Web Service API data from ProgrammableWeb.com 
