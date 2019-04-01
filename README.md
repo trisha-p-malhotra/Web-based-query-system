@@ -1,5 +1,5 @@
 # WebServiceMashup
-A web based query system that uses the following tech-stack:
+A web based query system that uses the following tech-stack:  
 -REST  
 -MongoDB  
 -Python  
