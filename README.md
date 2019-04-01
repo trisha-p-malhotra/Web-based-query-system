@@ -1,5 +1,9 @@
 # WebServiceMashup
-A web based query system that uses REST, MongoDB as backend and Python & Flask for web deployment
+A web based query system that uses the following tech-stack:
+-REST
+-MongoDB
+-Python
+-Flask
 
 Given dataset: 
 Web Service API data from ProgrammableWeb.com 
